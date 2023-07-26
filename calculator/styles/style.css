@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+  }
+  
+  .main {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #D9DBDF 0%, #FFFFFF 100%);
+  }
+  
+  .calculator {
+    width: 250px;
+    height: 477px;
+    max-width: 400px; /* Esto es para que la calculadora no se vuelva demasiado grande en pantallas grandes */
+    margin: 0 auto; 
+    background: #C498E0;
+    border-radius: 15px;
+    position: relative;
+  }
+    .calculator::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      box-shadow: 0 50px 60px black;
+    }
+  
+  .top-bar {
+    width: 100%;
+    height: 50px;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    border-bottom: transparent;
+    border-radius: 15px 15px 0 0; 
+  }
+    .top-bar::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #FECB41;
+      border-radius: 50%;
+      box-shadow: 15px 0 0 #6DCA3E,
+                  -15px 0 0 #EF6B6A;
+    }
+    
+  .screen {
+    width: 100%;
+    height: 120px;
+    text-align: right;
+    padding-right: 2rem;
+    padding-top: .5rem;
+    color: #130381;
+    background: white; }
+    .screen__top {
+      font-size: 1.5rem;
+      color: #B2B2B2; 
+    }
+    .screen__content {
+      font-size: 4rem; 
+    }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .7px;
+    color: #F5E9FF;
+    font-weight: 50px;
+  }  
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    font-size: 1.21rem;
+    background: #130381;
+    position: relative;
+    z-index: 100; 
+  }
+
+  /*Degradado botón por botón*/
+  .button:first-child {
+    background: linear-gradient(to bottom right, #3826B0 50%, #4D31B5 100%); }
+  .button:nth-child(2) {
+    background: linear-gradient(to bottom right, #422CB5 50%, #5B38BA 100%); }
+  .button:nth-child(3) {
+    background: linear-gradient(to bottom right, #5635B9 50%, #683FBC 100%); }
+  .button:nth-child(4) {
+    background: linear-gradient(to bottom right, #643DBC 50%, #7846C2 100%); }
+  .button:nth-child(5) {
+    background: linear-gradient(to bottom right, #7A68C7 50%, #8C72CA 100%); }
+  .button:nth-child(6) {
+    background: linear-gradient(to bottom right, #846CC8 50%, #9676CC 100%); }
+  .button:nth-child(7) {
+    background: linear-gradient(to bottom right, #8E72CB 50%, #A27BD3 100%); }
+  .button:nth-child(8) {
+    background: linear-gradient(to bottom right, #7343C0 50%, #8C52C8 100%); }
+  .button:nth-child(9) {
+    background: linear-gradient(to bottom right, #896FCA 50%, #9A77CE 100%); }
+  .button:nth-child(10) {
+    background: linear-gradient(to bottom right, #9274CC 50%, #A67CD3 100%); }
+  .button:nth-child(11) {
+    background: linear-gradient(to bottom right, #9D78CF 50%, #AD82D5 100%); }
+  .button:nth-child(12) {
+    background: linear-gradient(to bottom right, #864CC4 50%, #9F59CE 100%); }
+  .button:nth-child(13) {
+    background: linear-gradient(to bottom right, #9576CE 50%, #A47DD3 100%); }
+  .button:nth-child(14) {
+    background: linear-gradient(to bottom right, #9F7AD2 50%, #B083D4 100%); }
+  .button:nth-child(15) {
+    background: linear-gradient(to bottom right, #A87FD4 50%, #BB87D8 100%); }
+  .button:nth-child(16) {
+    background: linear-gradient(to bottom right, #9754C8 50%, #AF62D1 100%); }
+  .button:nth-child(17) {
+    background: linear-gradient(to bottom right, #A27BD3 50%, #B184D5 100%);
+    border-bottom-left-radius: 15px; }
+  .button:nth-child(18) {
+    background: linear-gradient(to bottom right, #AD7FD3 50%, #BD89D8 100%); }
+  .button:nth-child(19) {
+    background: linear-gradient(to bottom right, #B586D6 50%, #C68EDA 100%); }
+  .button:last-child {
+    background: linear-gradient(to bottom right, #A85FCE 50%, #C36BD4 100%);
+    border-bottom-right-radius: 15px; }
+  .button:not(:nth-child(18)):hover {
+    background: linear-gradient(to bottom right, #3826B0 50%, #4D31B5 100%);
+      cursor: pointer; 
+  }
+
+  /* Media query para pantallas de menos de 600px de ancho */
+@media only screen and (max-width: 725px) {
+  .screen__content {
+      font-size: 24px; /* Reduce el tamaño de la fuente en dispositivos pequeños */
+  }
+  .button {
+      padding: 20px; /* Reduce el padding de los botones en dispositivos pequeños */
+  }
+}
