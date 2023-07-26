@@ -21,7 +21,8 @@ const writeOperation = text => {
         screenResult.textContent = '0';
         operationComplete = false;
     }
-    
+
+     // Para que se visualicen solo hasta 24 digitos//
     if (isNaN(lastValue()) && isNaN(text)) {
          screenOperation.textContent = screenOperation.textContent.substring(0, 
          screenOperation.textContent.length-1)
@@ -35,7 +36,8 @@ const writeResult =() => {
         screenOperation.textContent.length -1)
     screenResult.textContent = eval(screenOperation.textContent)
     operationComplete = true;
-    
+
+    // Para que si el resultado es mayor de 9 digitos, el resultado quede bajo las medidas de la calculadora//    
     if(screenResult.textContent.length> 9) {
         screenResult.style.fontSize = '1.21rem';
         screenResult.style.marginTop = '1.21rem';
