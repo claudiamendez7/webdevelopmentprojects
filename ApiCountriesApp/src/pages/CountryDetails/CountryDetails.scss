@@ -1,0 +1,39 @@
+.back-btn {
+    @include reset-btn-style(var(--ElementBG));
+    @include widther(135px);
+    @include flexer($align: center, $justify: center, $gap: 10px);
+    border-radius: 5px;
+    padding: 10px;
+    margin-block: 75px;
+    color: inherit;
+    box-shadow: var(--ElementShadow);
+    svg{
+      @include svg-filler(inherit);
+    }
+  }
+  
+  .country {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: fit-content;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+  
+    margin-bottom: 50px;
+    @media (max-width: 810px) {
+      grid-template-columns: initial;
+      grid-template-rows: auto 1fr;
+      align-items: start;
+    }
+    @include element("name") {
+      margin-bottom: 30px;
+      font-size: 2rem
+    }
+    @include element("flag") {
+      @include widther(650px);
+      box-shadow: var(--ElementShadow);
+      
+    }
+  
+  }

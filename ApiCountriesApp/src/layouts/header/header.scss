@@ -1,0 +1,18 @@
+.header {
+    box-shadow: var(--ElementShadow);
+    padding-block: min(10vh, 30px);
+  
+    font: {
+    }
+    &__logo {
+      font: {
+        size: clamp(1.2rem, 0.9183rem + 1.2019vw, 2rem);
+        weight: 800;
+      }
+    }
+  
+    .container {
+      @include flexer($justify: space-between, $align: center, $wrap: wrap);
+    }
+  
+  }

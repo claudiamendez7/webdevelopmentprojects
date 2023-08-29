@@ -1,0 +1,127 @@
+// remove all styling of buttons
+@mixin reset-btn-style($bgColor: transparent, $color: white) {
+    background: $bgColor;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  // shortcut to using flex layout
+  @mixin flexer(
+    $direction: null,
+    $justify: null,
+    $align: null,
+    $wrap: null,
+    $gap: null
+  ) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    gap: $gap;
+  }
+  
+  // remove heading that should only be visible for screen readers
+  @mixin invisible-heading() {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  // shortcut to position elements
+  @mixin positioner(
+    $type: null,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null,
+    $z-index: null
+  ) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+  }
+  
+  // change color of svgs
+  @mixin svg-filler($color: white) {
+    fill: currentColor;
+    color: $color;
+  }
+  
+  // set responsive width containers
+  @mixin widther($width) {
+    max-width: $width;
+    width: 100%;
+  }
+  
+  @mixin size($width, $height) {
+    height: $height;
+    width: $width;
+  }
+  
+  // write a sub element style without nesting it.
+  
+  @mixin element($names) {
+    @each $name in $names {
+      @at-root #{&}__#{$name} {
+        @content;
+      }
+    }
+  }
+  
+  // write a modifier style for element without nesting it.
+  @mixin modifier($name) {
+    @at-root #{&}--#{$name} {
+      @content;
+    }
+  }
+  
+  /*define the font more easily*/
+  @mixin font-face($fontName, $url, $style: normal, $weights...) {
+    @each $weight in $weights {
+      @font-face {
+        font-family: $fontName;
+        src: url($url);
+        font-weight: $weight;
+        font-style: $style;
+      }
+    }
+  }
+  
+  /*define weight classes to use on html elements directly rather than grouping elements together in css*/
+  @mixin weight-class($weightsMap) {
+    @each $weightName, $weightValue in $weightsMap {
+      .#{$weightName}-font {
+        font-weight: $weightValue;
+      }
+    }
+  }
+  
+  @mixin gradient($direction, $list) {
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+  }
+  
+  @mixin themeGenerator($themes, $chosenTheme) {
+    @each $key, $color in map-get($themes, $chosenTheme) {
+      #{$key}: $color;
+      
+    }
+  }
+  
+  @mixin colorize($bg, $color) {
+    background-color: $bg;
+    color: $color;
+  }

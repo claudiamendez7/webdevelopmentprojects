@@ -1,0 +1,9 @@
+.toolbar {
+    @include flexer(
+      $justify: space-between,
+      $align: center,
+      $gap: 30px,
+      $wrap: wrap
+    );
+    margin-block: min(10vh, 50px);
+  }
