@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Navbar.css';
-import { FontAwesomeIcon } from '@fontawesome/react-fontawesome';
-import { faMoon, faSun } from '@fontawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 const Navbar = () => {
 

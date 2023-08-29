@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './CountryDetails.css';
-import { FontAwesomeIcon } from '@fontawesome/react-fontawesome';
-import { faArrowLeftLong } from '@fontawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
 const CountryDetails = ({ countryData, setData }) => {
 

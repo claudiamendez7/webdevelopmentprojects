@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-import { FontAwesomeIcon } from '@fontawesome/react-fontawesome';
-import { faSearch, faAngleDown } from '@fontawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = ({ setQuery, setFilter }) => {
