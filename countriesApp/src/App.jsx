@@ -67,7 +67,7 @@ function App() {
         Object.keys(data)?.length > 0 && <CountryDetails countryData={data} setData={setData} /> :
         <>
           <Header setQuery={setQuery} setFilter={setFilter} />
-          {<Countries query={query} filter={filter} countryData={countryData} filterData={filterData} setData={setData} loading={loading} />}
+          <Countries query={query} filter={filter} countryData={countryData} filterData={filterData} setData={setData} loading={loading} />
         </>
       }
     </>
