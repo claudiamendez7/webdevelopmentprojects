@@ -4,8 +4,8 @@ function getCurrentTheme() {
   if (localStorage.getItem("theme") == null) {
     const currentTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
-      ? "Dark"
-      : "Light";
+      ? "dark"
+      : "light";
     localStorage.setItem("theme", currentTheme);
   }
   return localStorage.getItem("theme");
