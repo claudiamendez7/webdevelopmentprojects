@@ -1,0 +1,122 @@
+.Header {
+    padding: 0 5rem;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.input__container {
+    width: 500px;
+    background: var(--clr-element);
+    box-shadow: var(--element-shadow);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.input__container .icon {
+    font-size: 1.2rem;
+    color: var(--clr-input-text);
+    padding: 0 1.5rem;
+}
+
+.country__input {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    background: var(--clr-element);
+    font-size: 1rem;
+    color: var(--clr-text);
+}
+
+/* Changing the input placeholder color */
+input::-webkit-input-placeholder {
+    color: var(--clr-text);
+}
+
+input::-moz-placeholder {
+    color: var(--clr-text);
+}
+
+input::-ms-input-placeholder {
+    color: var(--clr-text);
+}
+
+input::placeholder {
+    color: var(--clr-text);
+}
+
+/* Filter dropdown */
+.filter {
+    width: max-content;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    box-shadow: var(--element-shadow);
+    font-weight: 600;
+    background-color: var(--clr-element);
+    color: var(--clr-text);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.filter__options {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: var(--clr-element);
+    padding: 1rem 0;
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    box-shadow: var(--element-shadow);
+    z-index: 5;
+}
+
+.filter__list {
+    width: 100%;
+    list-style-type: none;
+    padding-left: 2rem;
+}
+
+.filter__list .list__item {
+    padding: 0.3rem 0;
+}
+
+/* Header Responsive code */
+@media screen and (max-width: 768px) {
+    .Header {
+        padding: 5rem 2rem 0rem 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Header {
+        width: 90vw;
+        padding: 0;
+        padding-top: 2rem;
+        margin: auto;
+    }
+}
