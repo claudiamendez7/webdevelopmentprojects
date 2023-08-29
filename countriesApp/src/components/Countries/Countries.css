@@ -1,0 +1,35 @@
+.Countries {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* If search not found then result text style */
+.result__msg {
+    width: 100%;
+    text-align: center;
+    color: var(--clr-text);
+}
+
+.loading {
+    color: var(--clr-text);
+}
+
+/* Countries Responsive code */
+@media screen and (max-width: 800px) {
+    .Countries {
+        padding: 2rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Countries {
+        width: 90vw;
+        padding: 0;
+        padding: 3rem 0;
+        margin: auto;
+    }
+}

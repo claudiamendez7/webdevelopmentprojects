@@ -1,0 +1,134 @@
+.CountryDetails {
+    font-size: 18px;
+    padding: 5rem;
+    padding-top: 0;
+}
+
+.CountryDetails .header {
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.back__btn {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Button model which is used for back btn as well as countries borders */
+.button__model {
+    width: 120px;
+    font-size: inherit;
+    padding: 0.5rem 0rem;
+    background-color: var(--clr-element);
+    box-shadow: var(--element-shadow);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    color: var(--clr-text);
+    text-align: center;
+}
+
+.back__btn:focus {
+    outline: none;
+}
+
+.country__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.country__image {
+    width: 45%;
+    aspect-ratio: 7 / 5;
+}
+
+.country__image>img {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    -webkit-border-radius: var(--border-radius) var(--border-radius) 0 0;
+    -moz-border-radius: var(--border-radius) var(--border-radius) 0 0;
+    -ms-border-radius: var(--border-radius) var(--border-radius) 0 0;
+    -o-border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.country__details {
+    width: 45%;
+    aspect-ratio: 7 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--clr-text);
+}
+
+.panel {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.left__panel,
+.right__panel {
+    width: 50%;
+    min-width: 250px;
+    padding-top: 2rem;
+    font-size: inherit;
+}
+
+.data__name {
+    font-weight: 600;
+}
+
+.country__details p {
+    margin-bottom: 0.5rem;
+}
+
+.country__borders {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+/* Details Page Responsive code */
+
+@media screen and (max-width: 800px) {
+    .country__data {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .CountryDetails {
+        padding: 0;
+        padding-bottom: 5rem;
+        width: 90vw;
+        margin: auto;
+    }
+
+    .country__details,
+    .country__image {
+        width: 90vw;
+    }
+
+    .country__details {
+        padding-top: 2rem;
+    }
+}
