@@ -3,6 +3,7 @@ import './CountryDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
+
 const CountryDetails = ({ countryData, setData }) => {
 
     useEffect(() => {
