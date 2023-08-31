@@ -30,7 +30,7 @@ const Navbar = () => {
 
     return (
         <div className='Navbar'>
-            <h1 className="title">Where in the world?</h1>
+            <h2 className="title">Where in the world?</h2>
             <div className="theme__container" onClick={(e) => {
                 setTheme(!isDarkTheme);
                 setIsDarkTheme(!isDarkTheme);

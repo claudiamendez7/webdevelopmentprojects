@@ -35,7 +35,7 @@ function App() {
     if (query.length <= 0) {
       return;
     }
-    let filterData = countryData.filter((data) => data.name.toLowerCase().includes(query.toLowerCase()));
+    let filterData = countryData.filter((data) => data.name.common.toLowerCase().includes(query.toLowerCase()));
     setFilterData(filterData);
   }, [query]);
 

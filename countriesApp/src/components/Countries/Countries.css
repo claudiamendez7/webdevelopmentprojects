@@ -1,7 +1,7 @@
 .Countries {
-    padding: 5rem;
+    padding: 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 3rem;
     flex-wrap: wrap;
 }

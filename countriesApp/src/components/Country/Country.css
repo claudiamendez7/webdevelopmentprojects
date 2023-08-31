@@ -1,6 +1,6 @@
 .Country {
-    width: 250px;
-    height: 350px;
+    width: 245px;
+    height: 345px;
     background-color: var(--clr-element);
     box-shadow: var(--element-shadow);
     border-radius: var(--border-radius);
@@ -12,7 +12,7 @@
 }
 
 .card__image {
-    height: 50%;
+    height: 45%;
 }
 
 .card__image>img {
