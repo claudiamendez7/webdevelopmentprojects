@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 
-/* Button model which is used for back btn as well as countries borders */
+/* Button model for back btn and countries borders */
 .button__model {
     width: 120px;
     font-size: inherit;
@@ -109,7 +109,7 @@
     padding-top: 3rem;
 }
 
-/* Details Page Responsive code */
+/* Responsive code */
 
 @media screen and (max-width: 800px) {
     .country__data {

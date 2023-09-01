@@ -19,7 +19,8 @@ function App() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        let data = await fetch('https://restcountries.com/v3.1/all').then(response => response.json());
+        let data = await fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json());
         setCountryData(data);
         setLoading(false);
       } catch {
@@ -30,21 +31,23 @@ function App() {
   }, []);
 
 
-  // Filtering countries data when user search query
+  // Filtering countries data
   useEffect(() => {
     if (query.length <= 0) {
       return;
     }
-    let filterData = countryData.filter((data) => data.name.common.toLowerCase().includes(query.toLowerCase()));
+    let filterData = countryData.filter((data) => 
+    data.name.common.toLowerCase().includes(query.toLowerCase()));
     setFilterData(filterData);
   }, [query]);
 
-  // Filtering data when user choose region or change
+  // Filtering data choosing region
   useEffect(() => {
     if (filter == 'All') {
       setFilterData(countryData);
     } else {
-      let filterData = countryData.filter((data) => data.region.toLowerCase() === filter.toLowerCase());
+      let filterData = countryData.filter((data) => 
+      data.region.toLowerCase() === filter.toLowerCase());
       setFilterData(filterData);
     }
     setQuery('');
@@ -61,13 +64,14 @@ function App() {
 
   return (
     <>
-      {/* Showing Components based on conditions */}
+      {/* Components based on conditions */}
       <Navbar />
       {isDetailPage ?
         Object.keys(data)?.length > 0 && <CountryDetails countryData={data} setData={setData} /> :
         <>
           <Header setQuery={setQuery} setFilter={setFilter} />
-          <Countries query={query} filter={filter} countryData={countryData} filterData={filterData} setData={setData} loading={loading} />
+          <Countries query={query} filter={filter} countryData={countryData} filterData={filterData} 
+            setData={setData} loading={loading} />
         </>
       }
     </>

@@ -27,7 +27,7 @@ const Header = ({ setQuery, setFilter }) => {
                             <ul className='filter__list'>
                                 <li className="list__item" onClick={onFilter}>All</li>
                                 <li className="list__item" onClick={onFilter}>Africa</li>
-                                <li className="list__item" onClick={onFilter}>America</li>
+                                <li className="list__item" onClick={onFilter}>Americas</li>
                                 <li className="list__item" onClick={onFilter}>Asia</li>
                                 <li className="list__item" onClick={onFilter}>Europe</li>
                                 <li className="list__item" onClick={onFilter}>Oceania</li>

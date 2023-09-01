@@ -3,7 +3,7 @@ import './Country.css';
 
 const Country = ({ cardData, setData }) => {
     return (
-        // These cards will show the countries list and grid
+        // Countries list and grid
         <div className='Country' onClick={(e) => setData(cardData)}>
             <div className="card__image">
                 <img src={cardData.flags.svg} alt="country_image" />
