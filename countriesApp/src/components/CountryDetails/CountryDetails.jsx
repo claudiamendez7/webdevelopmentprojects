@@ -48,7 +48,7 @@ const CountryDetails = ({ countryData, setData }) => {
                             }
                         </div>
                     </div>
-                        {countryData.borders.length > 0 &&
+                        {countryData?.borders?.length > 0 &&
                         <div className="country__borders">
                             <p><span className='data__name'>Border Countries: </span></p>
                             {countryData.borders.map((borderName, index) => <div className='button__model' key={index}>{borderName}</div>)}
