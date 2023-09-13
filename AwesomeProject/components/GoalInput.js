@@ -19,13 +19,13 @@ function addGoalHandler() {
     props.onAddGoal(enteredGoalText);
     setEnteredGoalText('');
 }
-
     return (
         <Modal visible={props.visible} animationType="slide"> 
             <View style= {styles.inputContainer}>
                 <Image 
                     style= {styles.image}
-                    source={require('../assets/images/goal-icon.png')} />
+                    source={require('../assets/images/goal-icon.png')} 
+                />
                 <TextInput 
                     style={styles.textInput} 
                     placeholder='Your Course Goal!'
