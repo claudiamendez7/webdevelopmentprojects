@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { View, TextInput, StyleSheet, Alert} from "react-native";
 
-import Title from "../components/ui/Title";
 import Colors from "../constants/Colors";
 import Card from "../components/ui/Card";
 import InstructionText from "../components/ui/InstructionText";
 import PrimaryButton from "../components/ui/PrimaryButton";
+import Title from "../components/ui/Title";
 
 
 function StartGameScreen ({onPickedNumber}) {
@@ -87,6 +87,5 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flex: 1,
-
-    }
+    },
 });
