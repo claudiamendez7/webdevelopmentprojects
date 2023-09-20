@@ -27,7 +27,6 @@ useEffect(() => {
     async function prepare() {
         try {
             await SplashScreen.preventAutoHideAsync();
-            // Carga todos tus recursos aquí (por ejemplo, fonts, imágenes, etc.)
         } catch (e) {
             console.warn(e);
         }

@@ -11,7 +11,7 @@ import GuessLogItem from "../components/game/GuessLogItem";
 
 
 function generateRandomBetween(min, max, exclude) {
-    const rndNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    const rndNum = Math.floor(Math.random() * (max - min)) + min;
 
     if (rndNum === exclude) {
         return generateRandomBetween(min, max, exclude);
@@ -19,6 +19,9 @@ function generateRandomBetween(min, max, exclude) {
         return rndNum;
     }
 }
+
+let minBoundary = 1;
+let maxBoundary = 100;
 
 function GameScreen({userNumber, onGameOver}) {
     const initialGuess = generateRandomBetween(1, 100, userNumber);
@@ -31,13 +34,10 @@ function GameScreen({userNumber, onGameOver}) {
         }
     }, [currentGuess, userNumber, onGameOver]);
 
-const [minBoundary, setMinBoundary] = useState(1);
-const [maxBoundary, setMaxBoundary] = useState(100);
-
-    // useEffect(() => {
-    //     minBoundary = 1;
-    //     maxBoundary = 100;
-    // }, []);
+    useEffect(() => {
+        minBoundary = 1;
+        maxBoundary = 100;
+    }, []);
 
     function nextGuessHandler(direction) { 
         // direction => 'lower', 'greater'
@@ -52,10 +52,10 @@ const [maxBoundary, setMaxBoundary] = useState(100);
         }
 
         if (direction === 'lower') {
-            setMaxBoundary(currentGuess);
-        } else {
-            setMinBoundary(currentGuess + 1);
-        }
+            maxBoundary = currentGuess;
+          } else {
+            minBoundary = currentGuess + 1;
+          }
 
         const  newRndNumber= generateRandomBetween(
             minBoundary, 
