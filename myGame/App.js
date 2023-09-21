@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { StyleSheet, ImageBackground, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
+// import AppLoading from 'expo-app-loading'; //obsoleta
 import * as SplashScreen from 'expo-splash-screen';
 
 import StartGameScreen from './screens/StartGameScreen';
@@ -19,42 +20,39 @@ export default function App() {
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
    });
 
-   if (!fontsLoaded) {
-    return null;
-   }
-
-useEffect(() => {
-    async function prepare() {
+   useEffect(() => {
+    async function prepareApp() {  // Cambio aquí
         try {
             await SplashScreen.preventAutoHideAsync();
+            if (fontsLoaded) {
+                SplashScreen.hideAsync();
+            }
         } catch (e) {
             console.warn(e);
         }
     }
 
-    prepare();
-}, []);
-
-useEffect(() => {
-    if (fontsLoaded) {
-        SplashScreen.hideAsync();
-    }
+    prepareApp();  // Y aquí
 }, [fontsLoaded]);
+
+if (!fontsLoaded) {
+    return null;
+}
 
   function pickedNumberHandler(pickedNumber) {
     setUserNumber(pickedNumber);
     setGameIsOver(false);
-  }
+    }
 
   function gameOverHandler(numberOfRounds) {
     setGameIsOver(true);
     setGuessRounds(numberOfRounds);
-  }
+    }
 
   function startNewGameHandler() {
     setUserNumber(null);
     setGuessRounds(0);
-  }
+    } 
 
   let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
@@ -62,14 +60,14 @@ useEffect(() => {
     screen = (
       <GameScreen userNumber={userNumber} onGameOver={gameOverHandler} />
      );
-  }
+    }
 
   if (gameIsOver && userNumber) {
     screen= (
       <GameOverScreen 
-      userNumber={userNumber} 
-      roundsNumber={guessRounds} 
-      onStartNewGame={startNewGameHandler}
+        userNumber={userNumber} 
+        roundsNumber={guessRounds} 
+        onStartNewGame={startNewGameHandler}
       />
     );
   }
@@ -84,7 +82,7 @@ useEffect(() => {
         resizeMode='cover'
         style= {styles.rootScreen}
         imageStyle= {styles.backgroundImage}
-    >
+      > 
         <SafeAreaView style= {styles.rootScreen}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
