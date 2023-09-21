@@ -9,7 +9,7 @@ import {
     ScrollView } from "react-native";
 
 import PrimaryButton from "../components/ui/PrimaryButton";
-import Title from "../components/ui/Title.ios";
+import Title from "../components/ui/Title";
 import Colors from "../constants/Colors";
 import Card from "../components/ui/Card";
 import InstructionText from "../components/ui/InstructionText";

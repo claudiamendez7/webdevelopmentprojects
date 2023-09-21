@@ -4,6 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
 // import AppLoading from 'expo-app-loading'; //obsoleta
 import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
 
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
@@ -72,11 +73,13 @@ if (!fontsLoaded) {
     );
   }
 
-  return (
-    <LinearGradient 
+return (
+  <>
+    <StatusBar style='light'/>
+      <LinearGradient 
         colors ={[Colors.primary700, Colors.accent500]} 
         style= {styles.rootScreen}
-    >
+      >
       <ImageBackground 
         source={require('./assets/images/background.png')} 
         resizeMode='cover'
@@ -86,6 +89,7 @@ if (!fontsLoaded) {
         <SafeAreaView style= {styles.rootScreen}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
+   </>
   );
 }
 
