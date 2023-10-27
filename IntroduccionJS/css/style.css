@@ -11,7 +11,7 @@ h1, p, a {
     line-height:.8;
     color: white;
 }
-.contenido {
+.container {
     max-width: 1200px;
     margin: 5rem auto 0 auto;
     color: white;

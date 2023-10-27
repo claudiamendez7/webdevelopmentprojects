@@ -1,0 +1,24 @@
+{
+    "employees" : [
+        {
+            "id" : 1,
+            "name" : "Claudia",
+            "role" : "Junior frontend dev"
+        },
+        {
+            "id" : 2,
+            "name" : "Peter",
+            "role" : "UX / UI"
+        },
+        {
+            "id" : 3,
+            "name" : "Sarah",
+            "role" : "TMK"
+        },
+        {
+            "id" : 4,
+            "name" : "Robert",
+            "role" : "Senior frontend dev"
+        }
+    ]
+}
