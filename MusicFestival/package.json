@@ -1,0 +1,19 @@
+{
+  "name": "musicfestival",
+  "version": "1.0.0",
+  "description": "Project with Gulp, SASS and HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "ClaudiaM",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.69.5"
+  }
+}
